@@ -7,3 +7,7 @@ const livroSchema = new mongoose.Schema({
     editora: {type: String, required: true},
     numeroPaginas: {type: Number}
 });
+
+const livros = mongoose.model('livros', livroSchema); //cria sozinho se não existir
+
+module.exports = livros;
